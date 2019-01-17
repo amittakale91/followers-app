@@ -1,0 +1,18 @@
+<div class="row">
+  <h1>list of Followers</h1>
+  <div class="col-md-4 col-sm-4 col-xs-12 follower_item" 
+      *ngFor="let profile of profilelist"
+      [routerLink]="['../profile',profile.id,profile.name]">
+    <div class="follower_inner_item">
+      <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              <img src="{{profile.image}}" style="width:100%;">
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+              <p>{{ profile.name }}</p>
+              <p>{{ profile.address }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
